@@ -6,6 +6,7 @@
   <groupId>ar.com.kfgodel</groupId>
   <artifactId>root-pom</artifactId>
   <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>Kfodel-root-pom</name>
   <description>Repository to hold the definition of a root pom for kfgodel projects</description>
@@ -22,6 +23,7 @@
     <project.java.source>1.8</project.java.source>
     <project.java.target>1.8</project.java.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <version.plugin.compiler>3.3</version.plugin.compiler>
     <version.plugin.jar>2.6</version.plugin.jar>
