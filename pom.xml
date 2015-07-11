@@ -28,12 +28,13 @@
     <version.plugin.source>2.4</version.plugin.source>
     <version.plugin.failsafe>2.18.1</version.plugin.failsafe>
     <version.plugin.surefire>2.18.1</version.plugin.surefire>
-    <version.jacoco>0.7.6-SNAPSHOT</version.jacoco>
+    <version.jacoco>0.7.5.201505241946</version.jacoco>
 
     <version.slf4j>1.7.6</version.slf4j>
     <version.logback>1.1.1</version.logback>
     <version.junit>4.11</version.junit>
     <version.guava>16.0.1</version.guava>
+    <version.mockito>2.0.2-beta</version.mockito>
     <version.assertj>1.6.1</version.assertj>
     <version.javaspec>2.0</version.javaspec>
 
