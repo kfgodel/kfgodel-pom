@@ -13,9 +13,9 @@
 
 
   <scm>
-    <connection>scm:git:ssh://github.com/kfgodel/kfgodel-pom.git</connection>
-    <developerConnection>scm:git:ssh://github.com/kfgodel/kfgodel-pom.git</developerConnection>
-    <url>https://github.com/kfgodel/kfgodel-pom</url>
+    <connection>scm:git:ssh://github.com/kfgodel/kfgodel-root-pom.git</connection>
+    <developerConnection>scm:git:ssh://github.com/kfgodel/kfgodel-root-pom.git</developerConnection>
+    <url>https://github.com/kfgodel/kfgodel-root-pom</url>
   </scm>
 
 
