@@ -20,6 +20,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <version.plugin.build-helper>3.0.0</version.plugin.build-helper>
+    <version.plugin.versions>2.3</version.plugin.versions>
+    <version.plugin.scm>1.9.5</version.plugin.scm>
+
   </properties>
 
   <repositories>
@@ -60,5 +65,39 @@
       <url>http://kfgodel.info:8081/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
+
+
+  <build>
+    <plugins>
+      <!-- Plugin para leer la version actual del pom -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>${version.plugin.build-helper}</version>
+        <executions>
+          <execution>
+            <id>parsear version actual</id>
+            <goals>
+              <goal>parse-version</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Permite manipular la version del pom desde shell -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>${version.plugin.versions}</version>
+      </plugin>
+
+      <!-- Permite manejar git commiteando, tageuando o pusheando desde shell -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>${version.plugin.scm}</version>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
