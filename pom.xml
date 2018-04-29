@@ -10,11 +10,20 @@
 
   <name>Kfodel-root-pom</name>
   <description>Pom definition for all kfgodel projects</description>
+  <url>https://github.com/kfgodel/kfgodel-root-pom</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <scm>
-    <connection>scm:git:ssh://github.com/kfgodel/kfgodel-root-pom.git</connection>
     <developerConnection>scm:git:ssh://github.com/kfgodel/kfgodel-root-pom.git</developerConnection>
-    <url>https://github.com/kfgodel/kfgodel-root-pom</url>
+    <connection>${project.scm.developerConnection}</connection>
+    <url>${project.url}</url>
   </scm>
 
   <properties>
