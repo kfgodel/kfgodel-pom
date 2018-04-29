@@ -33,20 +33,21 @@
     <version.plugin.build-helper>3.0.0</version.plugin.build-helper>
     <version.plugin.versions>2.3</version.plugin.versions>
     <version.plugin.scm>1.9.5</version.plugin.scm>
+    <version.plugin.gpg>1.6</version.plugin.gpg>
 
   </properties>
 
   <repositories>
     <repository>
+      <id>kfgodel_mosquito</id>
+      <name>Repo Mosquito</name>
+      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
       <releases>
         <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
-        <updatePolicy>always</updatePolicy>
+        <updatePolicy>interval:5</updatePolicy>
       </snapshots>
-      <id>kfgodel_mosquito</id>
-      <name>Repo Mosquito</name>
-      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -55,7 +56,7 @@
         <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
-        <updatePolicy>always</updatePolicy>
+        <updatePolicy>interval:5</updatePolicy>
       </snapshots>
       <id>kfgodel_mosquito</id>
       <name>Repo Mosquito</name>
@@ -78,7 +79,8 @@
 
   <build>
     <plugins>
-      <!-- Plugin para leer la version actual del pom -->
+
+      <!-- Enables reading the current pom version -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -93,20 +95,52 @@
         </executions>
       </plugin>
 
-      <!-- Permite manipular la version del pom desde shell -->
+      <!-- Enables changing the pom version from shell -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
         <version>${version.plugin.versions}</version>
       </plugin>
 
-      <!-- Permite manejar git commiteando, tageuando o pusheando desde shell -->
+      <!-- Enables committing and tagging on git from the shell -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-plugin</artifactId>
         <version>${version.plugin.scm}</version>
       </plugin>
+
+      <!-- Sign artifacts for uploading to maven central -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>${version.plugin.gpg}</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
+
   </build>
+
+  <developers>
+    <developer>
+      <id>dlgarcia</id>
+      <name>Dario L Garcia</name>
+      <email>dario.garcia@10pines.com</email>
+      <organization>10Pines SRL</organization>
+      <organizationUrl>https://www.10pines.com/</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
 
 </project>
