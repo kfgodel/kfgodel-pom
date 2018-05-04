@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ar.com.kfgodel</groupId>
+  <groupId>info.kfgodel</groupId>
   <artifactId>root-pom</artifactId>
   <version>0.2.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -38,45 +38,18 @@
 
   </properties>
 
-  <repositories>
-    <repository>
-      <id>kfgodel_mosquito</id>
-      <name>Repo Mosquito</name>
-      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>interval:5</updatePolicy>
-      </snapshots>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>interval:5</updatePolicy>
-      </snapshots>
-      <id>kfgodel_mosquito</id>
-      <name>Repo Mosquito</name>
-      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
   <distributionManagement>
-    <repository>
-      <id>kfgodel_mosquito</id>
-      <name>Internal Releases</name>
-      <url>http://kfgodel.info:8081/nexus/content/repositories/releases/</url>
-    </repository>
     <snapshotRepository>
-      <id>kfgodel_mosquito</id>
-      <name>Internal Snapshots</name>
-      <url>http://kfgodel.info:8081/nexus/content/repositories/snapshots/</url>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
   </distributionManagement>
-
 
   <build>
     <plugins>
