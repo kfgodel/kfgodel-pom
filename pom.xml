@@ -171,7 +171,7 @@ of a fixed location is recommended. -->
       </snapshots>
       <id>kfgodel_mosquito</id>
       <name>Repo Mosquito</name>
-      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
+      <url>http://kfgodel.info:8081/nexus/repository/public/</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -184,19 +184,19 @@ of a fixed location is recommended. -->
       </snapshots>
       <id>kfgodel_mosquito</id>
       <name>Repo Mosquito</name>
-      <url>http://kfgodel.info:8081/nexus/content/groups/public/</url>
+      <url>http://kfgodel.info:8081/nexus/repository/public/</url>
     </pluginRepository>
   </pluginRepositories>
   <distributionManagement>
     <repository>
       <id>kfgodel_mosquito</id>
       <name>Internal Releases</name>
-      <url>http://kfgodel.info:8081/nexus/content/repositories/releases/</url>
+      <url>http://kfgodel.info:8081/nexus/repository/repoJars/</url>
     </repository>
     <snapshotRepository>
       <id>kfgodel_mosquito</id>
       <name>Internal Snapshots</name>
-      <url>http://kfgodel.info:8081/nexus/content/repositories/snapshots/</url>
+      <url>http://kfgodel.info:8081/nexus/repository/repoJars/</url>
     </snapshotRepository>
   </distributionManagement>
 
