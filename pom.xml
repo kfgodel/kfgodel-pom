@@ -6,7 +6,7 @@
 
   <groupId>info.kfgodel</groupId>
   <artifactId>root-pom</artifactId>
-  <version>0.2.2-SNAPSHOT</version>
+  <version>0.2.2</version>
   <packaging>pom</packaging>
 
   <name>Kfodel-root-pom</name>
