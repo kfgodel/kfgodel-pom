@@ -61,7 +61,7 @@
         <version>${version.plugin.build-helper}</version>
         <executions>
           <execution>
-            <id>parsear version actual</id>
+            <id>parse-pom-version</id>
             <goals>
               <goal>parse-version</goal>
             </goals>
